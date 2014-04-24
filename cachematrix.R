@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
-## Write a short comment describing this function
-
+#makeCacheMatrix : Base function creates functions and summrises through list . 
+#It provides follwing functions
+#1.Get matrix
+#2.Set matrix
+#3.Set inverse
+#4.Get inverse not compute inverse
 #set_inv : should not be exposed to cacheSolve as it updates the inverse potential problem
 makeCacheMatrix <- function(x = matrix()) {
     g_inv <- NULL
@@ -20,9 +22,8 @@ makeCacheMatrix <- function(x = matrix()) {
              get_inv = get_inv)
 }
 
-
-## Write a short comment describing this function
-
+#Computes the matrix inverse and store in the cache variable
+#Return matrix inverse if available return cached version else computes the inverse
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         ptm <- proc.time()
